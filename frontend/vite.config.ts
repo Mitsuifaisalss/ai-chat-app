@@ -7,18 +7,14 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true,
-    https: {
-      key: fs.readFileSync('../backend/certs/key.pem'),
-      cert: fs.readFileSync('../backend/certs/cert.pem'),
-    },
     proxy: {
       "/api": {
-        target: "https://localhost:8000",
+        target: "http://localhost:8000",
         changeOrigin: true,
         secure: false,
       },
       "/ws": {
-        target: "wss://localhost:8000",
+        target: "http://localhost:8000",
         ws: true,
         changeOrigin: true,
         secure: false,
