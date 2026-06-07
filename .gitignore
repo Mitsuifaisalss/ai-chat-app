@@ -19,3 +19,6 @@ frontend/.vite/
 # Editors
 .vscode/
 .idea/
+backend/certs/
+backend/database.db
+*.log

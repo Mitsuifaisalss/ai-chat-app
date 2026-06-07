@@ -56,7 +56,7 @@ log "Starting backend on http://localhost:8000"
   cd "$BACKEND_DIR"
   # shellcheck disable=SC1091
   . .venv/bin/activate
-  exec python -m uvicorn main:app --host 0.0.0.0 --port 8000 --ssl-keyfile certs/key.pem --ssl-certfile certs/cert.pem
+  exec python -m uvicorn main:app --host 0.0.0.0 --port 8000 
 ) &
 PIDS+=("$!")
 
