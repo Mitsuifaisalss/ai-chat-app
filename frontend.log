@@ -1,10 +1,5 @@
 
-  VITE v5.4.21  ready in 504 ms
-
-  ➜  Local:   https://localhost:5173/
-  ➜  Network: https://192.168.0.209:5173/
-12:35:56 PM [vite] vite.config.ts changed, restarting server...
-12:35:56 PM [vite] server restarted.
+  VITE v5.4.21  ready in 97 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: http://192.168.0.209:5173/
