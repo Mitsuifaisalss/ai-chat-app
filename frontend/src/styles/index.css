@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-zinc-100 antialiased;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Light mode overrides — applied when <html> does NOT have .dark */
+html:not(.dark) body {
+  @apply bg-white text-zinc-900;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-700/60 rounded;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Markdown styling for assistant messages */
+.md p {
+  @apply my-2 leading-relaxed;
+}
+.md ul,
+.md ol {
+  @apply my-2 pl-6;
+}
+.md ul {
+  @apply list-disc;
+}
+.md ol {
+  @apply list-decimal;
+}
+.md li {
+  @apply my-1;
+}
+.md h1,
+.md h2,
+.md h3 {
+  @apply font-semibold mt-4 mb-2;
+}
+.md h1 {
+  @apply text-xl;
+}
+.md h2 {
+  @apply text-lg;
+}
+.md h3 {
+  @apply text-base;
+}
+.md a {
+  @apply text-accent-soft underline underline-offset-2 hover:text-accent;
+}
+.md code {
+  @apply font-mono text-[0.9em] px-1.5 py-0.5 rounded bg-bg-soft border border-line;
+}
+html:not(.dark) .md code {
+  @apply bg-zinc-100 border-zinc-200;
+}
+.md pre {
+  @apply my-3 p-3 rounded-lg bg-bg-soft border border-line overflow-x-auto;
+}
+html:not(.dark) .md pre {
+  @apply bg-zinc-50 border-zinc-200;
+}
+.md pre code {
+  @apply bg-transparent border-0 p-0 text-sm;
+}
+.md blockquote {
+  @apply my-2 pl-3 border-l-2 border-line text-zinc-400 italic;
+}
+.md table {
+  @apply my-3 border-collapse text-sm;
+}
+.md th,
+.md td {
+  @apply border border-line px-2 py-1;
+}
